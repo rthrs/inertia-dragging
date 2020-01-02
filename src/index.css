@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.app {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.app-background {
+  height: 100%;
+  width: 100%;
+  background-image: url('/seamless.jpg'); 
+  background-repeat: repeat; 
+
+  /* background-size: 200px 150px;  */
+  
+  /* pointer-events: none; */
+}
