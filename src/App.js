@@ -1,9 +1,14 @@
 import React from 'react';
 
-function App() {
+const translate = { x: 0, y: 0};
+
+const App = () => {
+  const {x, y} = translate;
+  const transform = `translate(${x}%, ${y}%)`;
+  
   return (
-    <div className="app">
-      <div className="app-background" />
+    <div className="dragging-container">
+      <div className="dragging-background" style={{ transform }} />
     </div>
   );
 }

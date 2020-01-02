@@ -12,19 +12,23 @@ code {
     monospace;
 }
 
-.app {
-  text-align: center;
+.dragging-container {
   height: 100vh;
   width: 100vw;
+
+  position: relative;
+  overflow: hidden;
+  text-align: center;
 }
 
-.app-background {
-  height: 100%;
-  width: 100%;
-  background-image: url('/seamless.jpg'); 
-  background-repeat: repeat; 
+.dragging-background {
+  top: -100%;
+  left: -100%;
+  height: 300%;
+  width: 300%;
 
-  /* background-size: 200px 150px;  */
-  
-  /* pointer-events: none; */
+  position: absolute;
+
+  background-image: url('/seamless.jpg'); 
+  background-repeat: repeat;
 }
