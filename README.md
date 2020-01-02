@@ -1,8 +1,8 @@
 # Inertia Dragging
 
-Drag seamless texture infinitely with pleasing inertia.
+Drag seamless texture infinitely using pleasant inertia.
 
-Made just for kicks with React and RxJS.
+Made just for kicks with _React_ and _RxJS_.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -76,5 +76,5 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 ## Useful sources
 
 - Ininite texture trick: https://css-tricks.com/infinite-all-css-scrolling-slideshow/
-- Mouse events ith RxJS: https://medium.com/@jdjuan/mouse-drag-with-rxjs-45861c4d0b7e
+- Mouse events with RxJS: https://medium.com/@jdjuan/mouse-drag-with-rxjs-45861c4d0b7e
 - Dragging inertia: https://www.tutorialspoint.com/webgl/webgl_interactive_cube.htm
