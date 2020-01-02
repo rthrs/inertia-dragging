@@ -1,3 +1,9 @@
+# Inertia Dragging
+
+Drag seamless texture infinitely with pleasing inertia.
+
+Made just for kicks with React and RxJS.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,3 +72,9 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+## Useful sources
+
+- Ininite texture trick: https://css-tricks.com/infinite-all-css-scrolling-slideshow/
+- Mouse events ith RxJS: https://medium.com/@jdjuan/mouse-drag-with-rxjs-45861c4d0b7e
+- Dragging inertia: https://www.tutorialspoint.com/webgl/webgl_interactive_cube.htm
