@@ -24,7 +24,7 @@ body {
 
   position: absolute;
 
-  background-image: url('/seamless.jpg'); 
+  background-image: url('./seamless.jpg'); 
   background-repeat: repeat;
   background-size: 50vw 50vh;
   filter: invert(1) hue-rotate(215deg);
