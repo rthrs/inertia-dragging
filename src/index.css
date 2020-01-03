@@ -18,6 +18,7 @@ code {
   position: relative;
   overflow: hidden;
   text-align: center;
+  transform: translate3d(0, 0, 0);
 }
 
 .dragging-background {
@@ -31,4 +32,16 @@ code {
   background-image: url('/seamless.jpg'); 
   background-repeat: repeat;
   background-size: 100vw 100vh;
+  filter: invert(1) hue-rotate(215deg);
+}
+
+.control-popup {
+  bottom: 5%;
+  left: 5%;
+  padding: 0.5em 1em 0.5em 1em;
+  position: absolute;
+  background: white;
+  box-shadow: gray 3px;
+  box-shadow: 5px 5px 5px 0px grey;
+  border-radius: 5px;
 }
