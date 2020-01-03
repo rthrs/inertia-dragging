@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/inertia-dragging/precache-manifest.9aeb9aaf713e83190947d1b0fda4c1d9.js"
+  "/inertia-dragging/precache-manifest.f8bb6ef6e6bb261861f260860cb0e6f8.js"
 );
 
 self.addEventListener('message', (event) => {

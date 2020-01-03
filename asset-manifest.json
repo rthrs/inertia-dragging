@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/inertia-dragging/static/css/main.9da604ba.chunk.css",
-    "main.js": "/inertia-dragging/static/js/main.3700a746.chunk.js",
-    "main.js.map": "/inertia-dragging/static/js/main.3700a746.chunk.js.map",
+    "main.js": "/inertia-dragging/static/js/main.2c94f60e.chunk.js",
+    "main.js.map": "/inertia-dragging/static/js/main.2c94f60e.chunk.js.map",
     "runtime-main.js": "/inertia-dragging/static/js/runtime-main.2be4352e.js",
     "runtime-main.js.map": "/inertia-dragging/static/js/runtime-main.2be4352e.js.map",
-    "static/js/2.3760483f.chunk.js": "/inertia-dragging/static/js/2.3760483f.chunk.js",
-    "static/js/2.3760483f.chunk.js.map": "/inertia-dragging/static/js/2.3760483f.chunk.js.map",
+    "static/js/2.2055a3b2.chunk.js": "/inertia-dragging/static/js/2.2055a3b2.chunk.js",
+    "static/js/2.2055a3b2.chunk.js.map": "/inertia-dragging/static/js/2.2055a3b2.chunk.js.map",
     "index.html": "/inertia-dragging/index.html",
-    "precache-manifest.9aeb9aaf713e83190947d1b0fda4c1d9.js": "/inertia-dragging/precache-manifest.9aeb9aaf713e83190947d1b0fda4c1d9.js",
+    "precache-manifest.f8bb6ef6e6bb261861f260860cb0e6f8.js": "/inertia-dragging/precache-manifest.f8bb6ef6e6bb261861f260860cb0e6f8.js",
     "service-worker.js": "/inertia-dragging/service-worker.js",
     "static/css/main.9da604ba.chunk.css.map": "/inertia-dragging/static/css/main.9da604ba.chunk.css.map",
-    "static/js/2.3760483f.chunk.js.LICENSE": "/inertia-dragging/static/js/2.3760483f.chunk.js.LICENSE",
+    "static/js/2.2055a3b2.chunk.js.LICENSE": "/inertia-dragging/static/js/2.2055a3b2.chunk.js.LICENSE",
     "static/media/index.css": "/inertia-dragging/static/media/seamless.2514ef69.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.2be4352e.js",
-    "static/js/2.3760483f.chunk.js",
+    "static/js/2.2055a3b2.chunk.js",
     "static/css/main.9da604ba.chunk.css",
-    "static/js/main.3700a746.chunk.js"
+    "static/js/main.2c94f60e.chunk.js"
   ]
 }
