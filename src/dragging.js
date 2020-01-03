@@ -1,15 +1,32 @@
 import { fromEvent, interval, merge, animationFrameScheduler } from 'rxjs';
 import { takeUntil, mergeMap, pairwise, map, scan, withLatestFrom, takeWhile, tap, startWith, filter } from 'rxjs/operators';
-import { pick, map as mapR, multiply, nth, values, all, compose, lt } from 'ramda';
+import { map as mapR, multiply, nth, values, all, compose, lt } from 'ramda';
 import { AMORTIZATION, MOVE_THRESHOLD, DEFAULT_DIFF } from './constants';
 
-const mouseMove$ = fromEvent(document, 'mousemove')
-const mouseDown$ = fromEvent(document, 'mousedown')
-const mouseUp$ = fromEvent(document, 'mouseup')
+const mouseDown$ = merge(
+  fromEvent(document, 'mousedown'),
+  fromEvent(document, 'touchstart')
+);
+
+const pickClientDimensions = ({ clientX: x, clientY: y }) => ({ x, y });
+
+const mouseMove$ = merge(
+  fromEvent(document, 'mousemove').pipe(
+    map(pickClientDimensions)
+  ),
+  fromEvent(document, 'touchmove').pipe(
+    map((event) => event.changedTouches[0]),
+    map(pickClientDimensions)
+  )
+);
+
+const mouseUp$ = merge(
+  fromEvent(document, 'mouseup'),
+  fromEvent(document, 'touchend')
+);
 
 const mouseDrag$ = mouseDown$.pipe(
   mergeMap(() => mouseMove$.pipe(
-    map(pick(['x', 'y'])),
     pairwise(),
     takeUntil(mouseUp$),
   ))
