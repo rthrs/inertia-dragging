@@ -3,18 +3,12 @@ import { compose, not } from 'ramda';
 
 import { dragging$, inertiaDragging$ } from './dragging.js';
 import { DEFAULT_TRANSLATE, TRANSLATE_MODULO, SCALE_FACTOR } from './constants.js';
+import Controls from './Controls.js';
 
 const addTranslate = ({ dX, dY }) => ({ x, y }) => ({
   x: (x + dX) % TRANSLATE_MODULO,
   y: (y + dY) % TRANSLATE_MODULO
-})
-
-const ControlPopup = ({ withInertia, toggleWithInertia }) => (
-  <div className="control-popup">
-    <code>Drag seamless texture infinitely using pleasant inertia.</code>
-    <input type="checkbox" onChange={toggleWithInertia} checked={withInertia} />
-  </div> 
-)
+});
 
 const App = () => {
   const [translate, setTransalte] = useState(DEFAULT_TRANSLATE);
@@ -38,9 +32,9 @@ const App = () => {
 
   return (
     <div className="dragging-container">
-      <div className="dragging-background" style={{ transform }} />
+      <div className="dragging-background grabbable" style={{ transform }} />
 
-      <ControlPopup withInertia={withInertia} toggleWithInertia={toggleWithInertia} />
+      <Controls withInertia={withInertia} toggleWithInertia={toggleWithInertia} />
     </div>
   );
 }
