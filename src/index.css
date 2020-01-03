@@ -1,8 +1,5 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -27,7 +24,7 @@ body {
   background-image: url('./seamless.jpg'); 
   background-repeat: repeat;
   background-size: 50vw 50vh;
-  filter: invert(1) hue-rotate(215deg);
+  transform: scale(0.5);
 }
 
 .controls {
@@ -51,4 +48,14 @@ body {
 
 .grabbable:active {
   cursor: grabbing;
+}
+
+.MuiFormControlLabel-labelPlacementStart {
+  text-align: left;
+  margin-left: 0 !important;
+}
+
+.MuiSnackbarContent-message > div {
+  text-align: left;
+  margin-top: 3px;
 }
