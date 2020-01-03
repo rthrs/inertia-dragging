@@ -4,8 +4,6 @@ import { compose } from 'ramda';
 import { dragging$, inertiaDragging$ } from './dragging.js';
 import { DEFAULT_TRANSLATE, TRANSLATE_MODULO, SCALE_FACTOR } from './constants.js';
 
-
-
 const addTranslate = ({ dX, dY }) => ({ x, y }) => ({
   x: (x + dX) % TRANSLATE_MODULO,
   y: (y + dY) % TRANSLATE_MODULO
