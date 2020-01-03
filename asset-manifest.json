@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/inertia-dragging/static/css/main.7336f1be.chunk.css",
+    "main.js": "/inertia-dragging/static/js/main.52a6b855.chunk.js",
+    "main.js.map": "/inertia-dragging/static/js/main.52a6b855.chunk.js.map",
+    "runtime-main.js": "/inertia-dragging/static/js/runtime-main.2be4352e.js",
+    "runtime-main.js.map": "/inertia-dragging/static/js/runtime-main.2be4352e.js.map",
+    "static/js/2.e84da2bb.chunk.js": "/inertia-dragging/static/js/2.e84da2bb.chunk.js",
+    "static/js/2.e84da2bb.chunk.js.map": "/inertia-dragging/static/js/2.e84da2bb.chunk.js.map",
+    "index.html": "/inertia-dragging/index.html",
+    "precache-manifest.ab180e31236bcb7129809a3018d5baac.js": "/inertia-dragging/precache-manifest.ab180e31236bcb7129809a3018d5baac.js",
+    "service-worker.js": "/inertia-dragging/service-worker.js",
+    "static/css/main.7336f1be.chunk.css.map": "/inertia-dragging/static/css/main.7336f1be.chunk.css.map",
+    "static/js/2.e84da2bb.chunk.js.LICENSE": "/inertia-dragging/static/js/2.e84da2bb.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2be4352e.js",
+    "static/js/2.e84da2bb.chunk.js",
+    "static/css/main.7336f1be.chunk.css",
+    "static/js/main.52a6b855.chunk.js"
+  ]
+}
