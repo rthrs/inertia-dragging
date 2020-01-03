@@ -1,20 +1,24 @@
-import { fromEvent } from 'rxjs';
-import { takeUntil, mergeMap, pairwise, map } from 'rxjs/operators'
-import { pick, map as mapR } from 'ramda';
+import { fromEvent, interval, merge, animationFrameScheduler } from 'rxjs';
+import { takeUntil, mergeMap, pairwise, map, scan, withLatestFrom, takeWhile, tap, startWith } from 'rxjs/operators'
+import { pick, map as mapR, multiply, nth, values, all, compose, lt } from 'ramda';
+import { AMORTIZATION, MOVE_THRESHOLD, DEFAULT_TRANSLATE } from './constants';
 
 const mouseMove$ = fromEvent(document, 'mousemove')
 const mouseDown$ = fromEvent(document, 'mousedown')
 const mouseUp$ = fromEvent(document, 'mouseup')
 
-export const mousePairwiseDrag$ = mouseDown$.pipe(
+const mouseDrag$ = mouseDown$.pipe(
   mergeMap(() => mouseMove$.pipe(
+    startWith(DEFAULT_TRANSLATE, DEFAULT_TRANSLATE),
+    map(pick(['x', 'y'])),
     pairwise(),
-    takeUntil(mouseUp$))
-  )
+    takeUntil(mouseUp$),
+  ))
 );
 
-export const dragTranslate$ = mousePairwiseDrag$.pipe(
-  map(mapR(pick(['x', 'y']))),
+const animationFrame$ = interval(0, animationFrameScheduler);
+
+export const dragging$ = mouseDrag$.pipe(
   map(([prev, current]) => {
     const { innerHeight: height, innerWidth: width } = window;
 
@@ -22,5 +26,21 @@ export const dragTranslate$ = mousePairwiseDrag$.pipe(
     const dY = (current.y - prev.y) / height;
 
     return { dX, dY };
-  }),
+  })
 );
+
+const inertia$ = mouseUp$.pipe(
+  withLatestFrom(dragging$),
+  map(nth(1)),
+  tap(() => console.log('Kick off inertia')),
+  mergeMap((value) => animationFrame$.pipe(
+    scan(mapR(multiply(AMORTIZATION)), value),
+    takeWhile(compose(all(lt(MOVE_THRESHOLD)), mapR(Math.abs), values)),
+    takeUntil(mouseDown$)
+  ))
+)
+
+export const inertiaDragging$ = merge(
+  dragging$,
+  inertia$
+)

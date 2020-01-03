@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { compose } from 'ramda';
 
-import { dragTranslate$ } from './dragging.js';
+import { dragging$, inertiaDragging$ } from './dragging.js';
+import { DEFAULT_TRANSLATE, TRANSLATE_MODULO, SCALE_FACTOR } from './constants.js';
 
-const DEFAULT_TRANSLATE = { x: 0, y: 0 };
-const TRANSLATE_MODULO = 1;
-const SCALE_FACTOR = 1/3 * 100;
+
 
 const addTranslate = ({ dX, dY }) => ({ x, y }) => ({
   x: (x + dX) % TRANSLATE_MODULO,
@@ -16,7 +15,8 @@ const App = () => {
   const [translate, setTransalte] = useState(DEFAULT_TRANSLATE);
 
   useEffect(() => {    
-    dragTranslate$.subscribe(compose(setTransalte, addTranslate));
+    // dragging$.subscribe(compose(setTransalte, addTranslate));
+    inertiaDragging$.subscribe(compose(setTransalte, addTranslate));
   }, []);
 
   const { x, y } = translate;
